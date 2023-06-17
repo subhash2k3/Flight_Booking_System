@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Dashboard</title>
+    <style>
+        /* Base styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media.istockphoto.com/id/868924070/photo/traffic-at-the-airport.jpg?s=1024x1024&w=is&k=20&c=GszdPucvT48sicOTR0FDYIoCp5WFmC8661Kj1Gg2eX4=');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* CSS styles for the "Flights" and "My Bookings" buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        /* CSS styles for the "Logout" button */
+        .logout-button {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* CSS styles for the "Account" button */
+        .account-button {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 130px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.php" class="logout-button">Logout</a>
+    <a href="account.php" class="account-button">Account</a>
+
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to the Flight Dashboard!</h1>
+            <a href="flights.php" class="button">Flights</a>
+            <a href="bookings.php" class="button">My Bookings</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional Styles and Animations */
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #main {
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #login, #books {
+      margin-top: 50px;
+      opacity: 0;
+      animation: slideInUp 1s ease-in;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="submit"]:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #45a049;
+    }
+
+    /* CSS animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <img src="loading.gif" alt="Loading">
+  </div>
+  <div id="main">
+    <h1>Library Management</h1>
+    <div id="login">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+      </form>
+      <a href="/signup">Sign up</a>
+    </div>
+    <div id="books">
+      <h2>Books</h2>
+      <ul id="book-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
